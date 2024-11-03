@@ -11,43 +11,43 @@
                 Job Info
             </h2>
 
-            <x-inputs.text id="title" name="title" label="Job Title" placeholder="Enter a job title" value="{{old('title', $job->title)}}"/>
+            <x-inputs.text id="title" name="title" label="Job Title" placeholder="Enter a job title" :value="old('title', $job->title)"/>
 
-            <x-inputs.textarea name="description" id="description" placeholder="Enter Job Description" label="Job Description" />
+            <x-inputs.textarea name="description" id="description" placeholder="Enter Job Description" label="Job Description" :value="old('description', $job->description)" />
 
-            <x-inputs.text id="salary" name="salary" label="Salary" type="number" placeholder="90000"/>
+            <x-inputs.text id="salary" name="salary" label="Salary" type="number" placeholder="90000" :value="old('salary', $job->salary)"/>
 
-            <x-inputs.textarea name="requirements" id="requirements" placeholder="Enter Requirements" label="Requirements" />
+            <x-inputs.textarea name="requirements" id="requirements" placeholder="Enter Requirements" label="Requirements" :value="old('requirements', $job->requirements)"/>
 
-            <x-inputs.textarea name="benefits" id="benefits" placeholder="Enter Benefits" label="Benefits" />
+            <x-inputs.textarea name="benefits" id="benefits" placeholder="Enter Benefits" label="Benefits" :value="old('benefits', $job->benefits)" />
 
             <x-inputs.text id="tags" name="tags" label="Tags (comma-separated)" placeholder="development, coding, java, python"/>
 
-            <x-inputs.select id="job_type" name="job_type" label="Job Type" value="{{old('job_type')}}" :options="['' => 'Select Job Type', 'Full-Time' => 'Full-Time', 'Part-Time' => 'Part-Time', 'Contract' => 'Contract', 'Temporary' => 'Temporary', 'Internship' => 'Internship', 'Volunteer' => 'Volunteer', 'On-Call' => 'On-Call']" />
+            <x-inputs.select id="job_type" name="job_type" label="Job Type" :value="old('job_type', $job->job_type)" :options="['' => 'Select Job Type', 'Full-Time' => 'Full-Time', 'Part-Time' => 'Part-Time', 'Contract' => 'Contract', 'Temporary' => 'Temporary', 'Internship' => 'Internship', 'Volunteer' => 'Volunteer', 'On-Call' => 'On-Call']" />
 
-            <x-inputs.select id="remote" name="remote" label="Remote" value="{{old('remote')}}" :options="[0 => 'No', 1 => 'Yes']" />
+            <x-inputs.select id="remote" name="remote" label="Remote" :value="old('remote', $job->remote)" :options="[0 => 'No', 1 => 'Yes']" />
 
-            <x-inputs.text id="address" name="address" label="Address" placeholder="123 Main St"/>
+            <x-inputs.text id="address" name="address" label="Address" placeholder="123 Main St" :value="old('address', $job->address)"/>
 
-            <x-inputs.text id="city" name="city" label="City" placeholder="Albany"/>
+            <x-inputs.text id="city" name="city" label="City" placeholder="Albany" :value="old('city', $job->city)"/>
 
-            <x-inputs.text id="state" name="state" label="State" placeholder="NY"/>
+            <x-inputs.text id="state" name="state" label="State" placeholder="NY" :value="old('state', $job->state)"/>
 
-            <x-inputs.text id="zipcode" name="zipcode" label="ZIP Code" placeholder="12201"/>
+            <x-inputs.text id="zipcode" name="zipcode" label="ZIP Code" placeholder="12201" :value="old('zipcode', $job->zipcode)"/>
 
             <h2 class="text-2xl font-bold mb-6 text-center text-gray-500">
                 Company Info
             </h2>
 
-            <x-inputs.text id="company_name" name="company_name" label="Company Name" placeholder="Enter Company Name"/>
+            <x-inputs.text id="company_name" name="company_name" label="Company Name" placeholder="Enter Company Name" :value="old('company_name', $job->company_name)"/>
 
-            <x-inputs.textarea name="company_description" id="company_description" placeholder="Enter Company Description"  label="Company Description"/>
+            <x-inputs.textarea name="company_description" id="company_description" placeholder="Enter Company Description"  label="Company Description" :value="old('company_description', $job->company_description)"/>
 
-            <x-inputs.text id="company_website" name="company_website" label="Company Website" placeholder="Enter Company Website" type="url"/>
+            <x-inputs.text id="company_website" name="company_website" label="Company Website" placeholder="Enter Company Website" type="url" :value="old('company_website', $job->company_website)"/>
 
-            <x-inputs.text id="contact_phone" name="contact_phone" label="Contact Phone" placeholder="Enter Company Phone" label="Company Phone"/>
+            <x-inputs.text id="contact_phone" name="contact_phone" label="Contact Phone" placeholder="Enter Company Phone" label="Company Phone" :value="old('contact_phone', $job->contact_phone)"/>
 
-            <x-inputs.text id="contact_email" name="contact_email" label="Contact Email" type="email" placeholder="Enter Company Email"/>
+            <x-inputs.text id="contact_email" name="contact_email" label="Contact Email" type="email" placeholder="Enter Company Email" :value="old('contact_email', $job->contact_email)"/>
 
             <x-inputs.file id="company_logo" name="company_logo" label="Company Logo"/>
 
